@@ -1,0 +1,12 @@
+version: '2'
+services:
+  pcoipclient:
+    build:
+      dockerfile: ./Dockerfile
+      context: ./
+    network_mode: host
+    environment:
+    - DISPLAY=$DISPLAY
+    - QT_XKB_CONFIG_ROOT=/user/share/X11/xkb
+    volumes:
+    - /tmp/.X11-unix:/tmp/.X11-unix
