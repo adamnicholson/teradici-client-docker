@@ -11,6 +11,7 @@ RUN apt-get install -y pcoip-client
 RUN export uid=1000 gid=1000 && \
     mkdir -p /etc/sudoers.d/ && \
     mkdir -p /home/developer/.local/share && \
+    mkdir -p /home/developer/.config/Teradici && \
     echo "developer:x:${uid}:${gid}:Developer,,,:/home/developer:/bin/bash" >> /etc/passwd && \
     echo "developer:x:${uid}:" >> /etc/group && \
     echo "developer ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/developer && \

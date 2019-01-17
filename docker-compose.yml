@@ -10,3 +10,7 @@ services:
     - QT_XKB_CONFIG_ROOT=/user/share/X11/xkb
     volumes:
     - /tmp/.X11-unix:/tmp/.X11-unix
+    - teradici-client-config:/home/developer/.config/Teradici
+
+volumes:
+  teradici-client-config:
